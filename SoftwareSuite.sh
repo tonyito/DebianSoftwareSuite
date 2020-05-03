@@ -1,7 +1,7 @@
 #!/bin/bash
 # Ubuntu Software Suite Installer for Newly Formatted Systems
 
-echo -e "\e[36mHi! Welcome to the Unofficial Ubuntu Software Suite installer. This installer includes the following packages: Chrome Browser, Discord, Slack, Authy, VSCode, Postman, Signal, and Skype. You can select which ones you would like to install throughout the process. If you are running Ubuntu <16.04, you must install snap first by running 'sudo apt install snapd'.\e[0m"
+echo -e "\e[36mHi! Welcome to Tony's simple Ubuntu Software Suite installer. This installer includes the following packages: Chrome Browser, Discord, Slack, Authy, VSCode, Postman, Signal, and Skype. You can select which ones you would like to install throughout the process. If you are running Ubuntu <16.04, you must install snap first by running 'sudo apt install snapd'.\e[0m"
 
 echo ""
 
