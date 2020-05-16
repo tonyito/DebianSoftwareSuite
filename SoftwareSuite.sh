@@ -247,4 +247,33 @@ else
     echo "Not Installing Skype."
 fi
 
+DELUGEOPTION="0"
+
+if [ $INITIALIZE != "a" ]; then
+    while [ $DELUGEOPTION != "n" -o $DELUGEOPTION != "y" ]; do
+        echo -e "\e[32mWould you like to install Deluge? y/n\e[0m"
+
+        read DELUGEOPTION
+
+        if [ $DELUGEOPTION == "n" ]; then
+            DELUGE=false
+            break
+        elif [ $DELUGEOPTION == "y" ]; then
+            DELUGE=true
+            break
+        else
+            echo "Could not register option $DELUGEOPTION. Please type y/n."
+        fi
+    done
+else
+    DELUGE=true
+fi
+
+if [ $DELUGE == true ]; then
+    echo "Installing The Latest Version of Deluge..."
+    sudo apt-get install deluge
+else
+    echo "Not Installing Deluge."
+fi
+
 echo -e "\e[32mAll Done!\e[0m"

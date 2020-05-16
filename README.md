@@ -11,6 +11,7 @@ What's included?
 - Postman
 - Signal
 - Skype
+- Deluge BitTorrent client
 
 You can either install them all, or select just the ones you want!
 
