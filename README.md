@@ -1,5 +1,5 @@
 # Ubuntu Software Suite 🐧 
-A simple software suite installer for newly formatted systems on Ubuntu.
+A simple software suite installer for newly formatted systems on Ubuntu and other Debian based operating systems.
 
 What's included?
 
