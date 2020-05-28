@@ -13,6 +13,16 @@ if [ $INITIALIZE == "n" ]; then
     exit 0
 fi
 
+while [ $INITIALIZE != "a" -o $INITIALIZE != "y" ]; do
+    echo "Could not register option $INITIALIZE. Please type a/y/n."
+
+    read INITIALIZE
+
+    if [ $INITIALIZE == "a" -o $INITIALIZE == "y" ]; then
+    break
+    fi
+done
+
 ZSHOPTION="0"
 
 if [ $INITIALIZE != "a" ]; then
