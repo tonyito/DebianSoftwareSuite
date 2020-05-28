@@ -3,6 +3,7 @@ A simple software suite installer for newly formatted Debian based operating sys
 
 What's included?
 
+- Z Shell + Oh My Zsh
 - Chrome Browser
 - Discord
 - Slack
@@ -21,3 +22,7 @@ Simply navigate to the directory you downloaded the script to and run:
 
     chmod +x SoftwareSuite.sh
     sudo ./SoftwareSuite.sh
+
+## Notes
+
+Oh My Zsh installation prompt will not appear unless Z Shell is installed in /usr/bin/zsh

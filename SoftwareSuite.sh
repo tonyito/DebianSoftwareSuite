@@ -13,6 +13,66 @@ if [ $INITIALIZE == "n" ]; then
     exit 0
 fi
 
+ZSHOPTION="0"
+
+if [ $INITIALIZE != "a" ]; then
+    while [ $ZSHOPTION != "n" -o $ZSHOPTION != "y" ]; do
+        echo -e "\e[32mWould you like to install Z Shell? y/n\e[0m"
+
+        read ZSHOPTION
+
+        if [ $ZSHOPTION == "n" ]; then
+            ZSH=false
+            break
+        elif [ $ZSHOPTION == "y" ]; then
+            ZSH=true
+            break
+        else
+            echo "Could not register option $ZSHOPTION. Please type y/n."
+        fi
+    done
+else
+    ZSH=true
+fi
+
+if [ $ZSH == true ]; then
+    echo "Installing The Latest Version of Z Shell..."
+    sudo apt-get install zsh
+else
+    echo "Not Installing Z Shell."
+fi
+
+if [ -x /usr/bin/zsh ]; then
+    OMZOPTION="0"
+
+    if [ $INITIALIZE != "a" ]; then
+        while [ $OMZOPTION != "n" -o $OMZOPTION != "y" ]; do
+            echo -e "\e[32mWould you like to install Oh My Zsh? y/n\e[0m"
+
+            read OMZOPTION
+
+            if [ $OMZOPTION == "n" ]; then
+                OMZ=false
+                break
+            elif [ $OMZOPTION == "y" ]; then
+                OMZ=true
+                break
+            else
+                echo "Could not register option $OMZOPTION. Please type y/n."
+            fi
+        done
+    else
+        OMZ=true
+    fi
+
+    if [ $OMZ == true ]; then
+        echo "Installing The Latest Version of Oh My Zsh..."
+        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    else
+        echo "Not Installing Oh My Zsh."
+    fi
+fi
+
 CHROMEOPTION="0"
 
 if [ $INITIALIZE != "a" ]; then
