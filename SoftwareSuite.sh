@@ -77,7 +77,7 @@ if [ -x /usr/bin/zsh ]; then
 
     if [ $OMZ == true ]; then
         echo "Installing The Latest Version of Oh My Zsh..."
-        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+        sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     else
         echo "Not Installing Oh My Zsh."
     fi
